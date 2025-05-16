@@ -1,0 +1,72 @@
+A heuristica é admissivel?
+Goal States -> A e I
+
+Os valores que estao nas bolas e a hueristica
+O resto das transicoes é o custo
+
+
+Admissivel= A heuristica nao pode ser menor que o custo real
+
+NOT ADMISSIBLE
+
+G:8 -> 6
+F:10 -> 8
+E:7 -> 6
+Este valores sã sempre dos nós para os goal states
+
+
+Initial state: F
+STRATEGY A*
+*
+1/F/10
+--2/C/6
+-- -- 5/B/6
+-- -- -- -- 8/A/8
+-- -- -- -- -- SOLUTION NOT FOUND
+-- -- 6/D/9
+-- -- 7/E/11
+--3/G/11
+--4/H/6	
+-- -- 9/I/9
+-- -- 10/E/16
+-- -- 11/G/16
+
+# estes aqui sao os filhos ao qual eles se ligam
+# Custo do caminho + Heuristica do nó 3 + 3= 6 
+# O que nos expandimos agr é 0 C por causa da ordem alfabetica, mas se o H tivesse melhor custo era o H (imperativo)
+# Mas depois do C para o B é o custo acumulado, ou seja, do F para o B 3 + 1 + 2
+# É um array e ainda nao acabou no A porque ainda nao sabemos se ja chegamos ao final
+# Por isso temos de ir primeiro ao H porque esta primeiro no array e expandir ate chegar ao A
+
+
+Average 
+
+ABF= Number of edges / Number of non terminal node
+ABF= (n-1)/X = (11-1)/ 4 = 2.5 ( numero de nos que expanndiram C B H F
+
+
+efecttive branch
+
+B=?
+
+B^(d+1)   -1 / B-1 = N  (-1 fora do expoente)
+
+d= depth of the solution = 3 (comeca no 0)
+N= 11 ( numero de nos na arvore naquilo que fizemos em cima)*
+
+B 	N?
+2	15
+1.5	
+
+
+
+
+
+					
+
+
+
+
+
+
+
